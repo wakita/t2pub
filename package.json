@@ -1,6 +1,6 @@
 {
   "name": "t2pbs",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A node interface to TSUBAME 2.5 job submission system.",
   "main": "index.js",
   "scripts": {
