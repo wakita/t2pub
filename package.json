@@ -11,7 +11,5 @@
     "package.json"
   ],
   "license": "ISC",
-  "dependencies": {
-    "commander": "https://github.com/visionmedia/commander.js"
-  }
+  "dependencies": { }
 }
