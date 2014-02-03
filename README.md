@@ -40,3 +40,18 @@ T2PBSシステムはこの記述にしたがいt2subコマンドとmpirunコマ�
 - <ジョブID>.conf  ジョブの実行形態，t2subやmpirunの引数，環境変数などを JSON 形式で保存したもの．
 - <ジョブID>.err:  ジョブの標準エラー出力の内容
 - <ジョブID>.out:  ジョブの標準出力の内容
+
+## 実行ログの出力
+
+ジョブ記述に log フィールドを追加することで，t2sub コマンド，mpirun コマンドの引数や，MPI コマンド実行時の環境変数の状況を出力できる．
+
+    #!/usr/bin/env node
+    
+    require('t2pbs').run({
+        Command: '/work0/t2g-graphcrest/users/wakita/x10/template/bin/hello',
+        PBS: {
+          Select: { Chunks: 4, ncpus: 2, mem: '2gb' }
+        },
+        log: { argv: true, env: true }
+    });
+
